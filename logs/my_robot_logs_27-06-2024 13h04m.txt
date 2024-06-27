@@ -1,0 +1,5 @@
+2024-06-27 13:04:11,666 - DEBUG - my_robot - Debugando
+2024-06-27 13:04:11,666 - INFO - my_robot - Informando
+2024-06-27 13:04:11,666 - WARNING - my_robot - Perigo
+2024-06-27 13:04:11,666 - ERROR - my_robot - Erro
+2024-06-27 13:04:11,666 - CRITICAL - my_robot - Ferrou!

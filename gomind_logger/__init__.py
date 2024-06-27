@@ -1,9 +1,16 @@
-from typing import Union, Literal
-import datetime
-import logging
 import os
+import datetime
+from typing import Union, Literal
 
 class Logger:
+    LOG_LEVELS = {
+        "debug": 10,
+        "info": 20,
+        "warning": 30,
+        "error": 40,
+        "critical": 50
+    }
+
     def __init__(
         self, robot_name: str, filename: Union[str, None] = None, folder: Union[str, None] = "logs"
     ) -> None:
@@ -35,18 +42,37 @@ class Logger:
         self.logger.addHandler(file_handler)
 
         console_handler = logging.StreamHandler()
-        console_handler.setFormatter(formatter)
+        console_formatter = logging.Formatter("%(asctime)s - %(levelno)s - %(robot_name)s - %(message)s")
+        console_handler.setFormatter(console_formatter)
         self.logger.addHandler(console_handler)
 
     def log(
         self,
         message: str,
-        type: Literal["debug", "info", "warning", "error", "critical"] = "info",
+        level: Literal["debug", "info", "warning", "error", "critical"] = "info",
     ):
         extra = {'robot_name': self.robot_name}
-        self.logger.__getattribute__(type)(message, extra=extra)
+        log_level = self.LOG_LEVELS.get(level, self.LOG_LEVELS["info"])
+        self.logger.log(log_level, message, extra=extra)
 
     def get_execution_time(self):
         end_time = datetime.datetime.now()
         execution_time = end_time - self.start_time
         return execution_time
+    
+
+# import logging
+# def test_logger():
+#     logger = Logger("Robô teste")
+
+#     logger.log("Debugando", "debug")
+#     logger.log("Informando", "info")
+#     logger.log("Perigo", "warning")
+#     logger.log("Erro", "error")
+#     logger.log("Ferrou!", "critical")
+
+#     execution_time = logger.get_execution_time()
+#     print(f"Execution time: {execution_time}")
+
+# if __name__ == "__main__":
+#     test_logger()

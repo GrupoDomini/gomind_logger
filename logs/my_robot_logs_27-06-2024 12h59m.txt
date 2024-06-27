@@ -1,0 +1,15 @@
+2024-06-27 12:59:28,401 - DEBUG - my_robot - This is a debug message
+2024-06-27 12:59:28,401 - INFO - my_robot - This is an info message
+2024-06-27 12:59:28,401 - WARNING - my_robot - This is a warning message
+2024-06-27 12:59:28,401 - ERROR - my_robot - This is an error message
+2024-06-27 12:59:28,401 - CRITICAL - my_robot - This is a critical message
+2024-06-27 12:59:37,307 - INFO - my_robot - This is a debug message
+2024-06-27 12:59:37,307 - INFO - my_robot - This is an info message
+2024-06-27 12:59:37,322 - WARNING - my_robot - This is a warning message
+2024-06-27 12:59:37,322 - ERROR - my_robot - This is an error message
+2024-06-27 12:59:37,322 - CRITICAL - my_robot - This is a critical message
+2024-06-27 12:59:44,481 - INFO - my_robot - This is a debug message
+2024-06-27 12:59:44,481 - INFO - my_robot - This is an info message
+2024-06-27 12:59:44,481 - WARNING - my_robot - This is a warning message
+2024-06-27 12:59:44,481 - ERROR - my_robot - This is an error message
+2024-06-27 12:59:44,481 - CRITICAL - my_robot - This is a critical message
