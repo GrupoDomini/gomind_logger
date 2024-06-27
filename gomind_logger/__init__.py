@@ -1,4 +1,5 @@
 import os
+import logging
 import datetime
 from typing import Union, Literal
 
@@ -61,7 +62,6 @@ class Logger:
         return execution_time
     
 
-# import logging
 # def test_logger():
 #     logger = Logger("Robô teste")
 
