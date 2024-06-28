@@ -72,7 +72,7 @@ class Logger:
 #     logger.log("Ferrou!", "critical")
 
 #     execution_time = logger.get_execution_time()
-#     print(f"Execution time: {execution_time}")
+#     print(f"Tempo para rodar: {execution_time}")
 
 # if __name__ == "__main__":
 #     test_logger()
