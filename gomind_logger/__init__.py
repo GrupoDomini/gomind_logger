@@ -61,6 +61,9 @@ class Logger:
         execution_time = end_time - self.start_time
         return execution_time
     
+    def get_log_filename(self):
+        return os.path.basename(self.filename)
+    
 
 # def test_logger():
 #     logger = Logger("Robô teste")
